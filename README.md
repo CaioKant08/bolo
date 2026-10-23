@@ -43,3 +43,22 @@ Abra `index.html` no navegador. Para testar com servidor local, execute `python 
 
 ## Nota
 O design usa fontes do Google Fonts quando há acesso à rede; sem internet, carrega fontes locais de fallback. Não existem rastreadores nem dependências JavaScript externas.
+
+## Colocar fotos pelo próprio site do GitHub (sem baixar o repositório)
+1. Abra seu repositório em `github.com` e entre na pasta `assets` e depois em `fotos`.
+2. Clique em **Add file → Upload files**. Se a pasta `fotos` ainda não aparecer, use **Add file → Create new file**, nomeie como `assets/fotos/COLOQUE-AS-FOTOS-AQUI.txt` e confirme.
+3. Arraste suas fotos para a página de upload, ou selecione **choose your files**.
+4. Confirme em **Commit changes**. Aguarde a atualização do GitHub Pages.
+5. Volte à página inicial do repositório, abra `config.js` e clique no **lápis (Edit this file)**.
+6. Personalize o campo `nome` e o campo `foto` de cada pessoa. Exemplo:
+
+```js
+{ nome: 'Lara', foto: 'assets/fotos/lara.jpg', cor: '#f7a6a6' },
+{ nome: 'Pedro', foto: 'assets/fotos/pedro.png', cor: '#9bc9bb' },
+```
+
+7. Clique em **Commit changes** novamente e acesse o endereço do site. Abra em janela anônima ou atualize com **Ctrl+F5** caso veja a versão antiga.
+
+**Importante:** nomes de arquivo e extensões precisam coincidir exatamente (inclusive maiúsculas/minúsculas). Não deixe espaço ou acento nos nomes dos arquivos para facilitar. Não use o endereço `github.com/.../blob/...` no campo `foto`: use `assets/fotos/arquivo.jpg`. Se não carregar, verifique se os arquivos foram enviados na pasta certa.
+
+O arquivo `bolo-original.jpg` é só uma referência reservada no projeto, **não aparece no bolo por enquanto**. Para mostrar a foto original dentro da experiência, será necessário acrescentar essa funcionalidade.
