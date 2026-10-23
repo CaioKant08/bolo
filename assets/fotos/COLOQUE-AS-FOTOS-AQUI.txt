@@ -1,0 +1,1 @@
+Coloque aqui: amiga.jpg, namorado.jpg, eu.jpg, amigo1.jpg, amigo2.jpg, amigo3.jpg, bolo-original.jpg. Você também pode alterar nomes em config.js.
