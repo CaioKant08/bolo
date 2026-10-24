@@ -12,3 +12,43 @@
 .final-memories{margin:34px 0 20px;grid-column:1/-1}.final-memories h3{font-family:Fraunces,Georgia,serif;font-size:25px;margin:0 0 15px}
 .final-memory-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:13px}.final-memory{margin:0;padding:7px 7px 12px;border-radius:8px;background:#fff;box-shadow:0 4px 15px #8067591c;transform:rotate(-1deg);text-align:center;font-size:11px}.final-memory:nth-child(even){transform:rotate(2deg)}.final-memory img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;background:#f5ebe4}.final-memory figcaption{padding-top:8px}
 @media(max-width:680px){.memory-grid{grid-template-columns:repeat(3,minmax(0,1fr));max-height:380px}.final-memory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.final-memories{margin-top:20px}}
+
+
+/* Ajustes v5: etapa de memórias mais clara e melhor no celular */
+.memory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-height:420px;padding:2px 2px 8px}
+.memory-card{padding:8px;border-radius:16px;box-shadow:0 3px 14px #8f73631a;transition:transform .18s,border-color .18s,background .18s}
+.memory-card:active,.memory-card:hover{transform:translateY(-2px)}
+.memory-picture{aspect-ratio:0.88;border-radius:12px}
+.memory-card span{white-space:normal;line-height:1.3;text-align:center;font-weight:700}
+.final-memory-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.topper-face{width:58px;height:58px}
+.topper-name{font-size:10px}
+@media(max-width:900px){.workspace{grid-template-columns:1fr}.control-panel{min-height:auto}.memory-grid{max-height:none}}
+@media(max-width:680px){
+  .game-header{flex-direction:column;align-items:flex-start}
+  .progress-top{font-size:11px}
+  .track{height:12px}
+  .stage{order:1}
+  .control-panel{order:2;padding:18px}
+  .stage-scene{height:300px}
+  .cake-wrap{transform:scale(.68);margin-top:52px}
+  .memory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-height:none}
+  .memory-card{padding:7px}
+  .memory-picture{aspect-ratio:.82}
+  .action-hint{font-size:10px;line-height:1.4}
+  .feedback{font-size:11px;min-height:36px}
+  .next{padding:15px 16px}
+  .final-memory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:430px){
+  .shell{padding:0 12px}
+  .game{padding-top:24px}
+  .stage{padding:10px}
+  .stage-scene{height:260px}
+  .cake-wrap{transform:scale(.60);margin-top:38px}
+  .control-panel h3{font-size:24px}
+  .memory-grid{grid-template-columns:1fr 1fr}
+  .memory-card span{font-size:10px}
+  .topper-face{width:52px;height:52px}
+  .topper-name{font-size:9px}
+}
