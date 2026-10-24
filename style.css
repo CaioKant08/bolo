@@ -52,3 +52,19 @@
   .topper-face{width:52px;height:52px}
   .topper-name{font-size:9px}
 }
+
+/* v6: mural de fotografias sobre o bolo, preenchido a cada toque. */
+.cake-photo-wall{
+ position:absolute;left:46px;bottom:67px;width:248px;height:150px;
+ z-index:16;display:grid;grid-template-columns:repeat(var(--photo-cols,5),minmax(0,1fr));
+ grid-template-rows:repeat(var(--photo-rows,2),minmax(0,1fr));
+ gap:4px;padding:6px;border-radius:15px;
+ background:#fffbf0e8;border:2px solid #fffaf2;
+ box-shadow:0 3px 9px #7b4c3d47;
+ opacity:0;transition:opacity .2s;pointer-events:none;
+}
+.cake-photo-wall.visible{opacity:1}
+.cake-memory-tile{min-width:0;min-height:0;overflow:hidden;border:2px solid #fff;border-radius:5px;background:#e9c9bf;box-shadow:0 1px 3px #5e332b25;animation:photoOnCake .4s both;animation-delay:var(--enter-delay,0ms)}
+.cake-memory-tile img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes photoOnCake{from{transform:translateY(-17px) scale(.8);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}
+@media(max-width:680px){.cake-photo-wall{gap:3px}}
