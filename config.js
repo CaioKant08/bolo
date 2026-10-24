@@ -1,14 +1,13 @@
-// PERSONALIZE AQUI. Coloque as imagens na pasta assets/fotos/ e altere os caminhos.
-// Se uma foto ainda não existir, o jogo usa uma decoração ilustrada com as iniciais.
+// Uma foto por lembrança. Pode usar 5, 20, 40 ou quantas quiser.
+// Envie os arquivos para assets/fotos/ e edite os nomes abaixo.
 window.BOLO_CONFIG = {
-  amigos: [
-    { nome: 'Você', foto: 'assets/fotos/amiga.jpg', cor: '#f7a6a6' },
-    { nome: 'Namorado', foto: 'assets/fotos/namorado.jpg', cor: '#9bc9bb' },
-    { nome: 'Eu', foto: 'assets/fotos/eu.jpg', cor: '#a9baf2' },
-    { nome: 'Amigo 1', foto: 'assets/fotos/amigo1.jpg', cor: '#f4d18f' },
-    { nome: 'Amigo 2', foto: 'assets/fotos/amigo2.jpg', cor: '#d1b5e8' },
-    { nome: 'Amigo 3', foto: 'assets/fotos/amigo3.jpg', cor: '#a4d5cf' }
+  pessoas: [
+    { nome: 'Ela', foto: 'assets/fotos/ela.jpg', cor: '#f7a6a6' },
+    { nome: 'Eu', foto: 'assets/fotos/eu.jpg', cor: '#a9baf2' }
   ],
-  fotoBoloOriginal: 'assets/fotos/bolo-original.jpg',
-  mostrarReferencia: false
+  lembrancas: Array.from({ length: 20 }, (_, i) => ({
+    foto: `assets/fotos/memoria-${String(i + 1).padStart(2, '0')}.jpg`,
+    legenda: `Foto ${i + 1}`
+  })),
+  fotoBoloOriginal: 'assets/fotos/bolo-original.jpg'
 };
